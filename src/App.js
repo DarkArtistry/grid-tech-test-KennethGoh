@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import { Button, FormGroup, FormControl, InputGroup, DropdownButton, MenuItem } from 'react-bootstrap'
-
+import  accounting  from 'accounting'
 import $ from 'jquery'
 
 class App extends Component {
@@ -47,33 +47,33 @@ class App extends Component {
       console.log('On ' + date1 + ', 1 US Dollar was worth ' + data.rates.GBP + ' GBP')
 
       self.setState({
-        GBP1: data.rates.GBP * amount,
-        INR1: data.rates.INR * amount,
-        SGD1: data.rates.SGD * amount,
-        EUR1: data.rates.EUR * amount,
-        USD1: data.rates.USD * amount
+        GBP1: accounting.formatMoney(data.rates.GBP * amount),
+        INR1: accounting.formatMoney(data.rates.INR * amount),
+        SGD1: accounting.formatMoney(data.rates.SGD * amount),
+        EUR1: accounting.formatMoney(data.rates.EUR * amount),
+        USD1: accounting.formatMoney(data.rates.USD * amount)
       })
 
     })
 
     $.get('https://openexchangerates.org/api/historical/' + date2 + '.json', {app_id: 'ab697b9ae5074602b77047f385367130'}, function (data) {
       self.setState({
-        GBP2: data.rates.GBP * amount,
-        INR2: data.rates.INR * amount,
-        SGD2: data.rates.SGD * amount,
-        EUR2: data.rates.EUR * amount,
-        USD2: data.rates.USD * amount
+        GBP2: accounting.formatMoney(data.rates.GBP * amount),
+        INR2: accounting.formatMoney(data.rates.INR * amount),
+        SGD2: accounting.formatMoney(data.rates.SGD * amount),
+        EUR2: accounting.formatMoney(data.rates.EUR * amount),
+        USD2: accounting.formatMoney(data.rates.USD * amount)
       })
     })
 
     $.get('https://openexchangerates.org/api/historical/' + date3 + '.json', {app_id: 'ab697b9ae5074602b77047f385367130'}, function (data) {
 
       self.setState({
-        GBP3: data.rates.GBP * amount,
-        INR3: data.rates.INR * amount,
-        SGD3: data.rates.SGD * amount,
-        EUR3: data.rates.EUR * amount,
-        USD3: data.rates.USD * amount
+        GBP3: accounting.formatMoney(data.rates.GBP * amount),
+        INR3: accounting.formatMoney(data.rates.INR * amount),
+        SGD3: accounting.formatMoney(data.rates.SGD * amount),
+        EUR3: accounting.formatMoney(data.rates.EUR * amount),
+        USD3: accounting.formatMoney(data.rates.USD * amount)
       })
 
     })
