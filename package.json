@@ -11,7 +11,7 @@
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.6.1"
-  },
+  },"homepage": "https://polar-inlet-71534.herokuapp.com/",
   "devDependencies": {
     "react-scripts": "1.0.7"
   },
