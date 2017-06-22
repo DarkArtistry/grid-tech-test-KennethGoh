@@ -27,3 +27,5 @@ above is how i get the exchange rate and multiply it with the input amount in th
 <td>GBP</td><td>{this.state.GBP1}</td><td>{this.state.GBP2}</td><td>{this.state.GBP3}</td>
 ```
 Example of what the data should display
+
+## Demo
